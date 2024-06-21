@@ -13,6 +13,9 @@ const inter = Alegreya({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Aesthetic Gardens",
   description: "The garden maintenance service organization",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
