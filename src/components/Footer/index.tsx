@@ -30,18 +30,20 @@ const LINKS = [
 const Footer = () => {
   return (
     <footer className="bg-[#518A51]">
-      <div className="flex justify-between px-[88px] py-[32px]">
+      <div className="flex justify-between gap-2 px-[20px] py-[32px] sm:px-[30px] md:px-[88px]">
         <div className="flex flex-col gap-3">
           {LINKS.map(({ href, label }) => (
-            <Link key={href} className="text-[20px]" href={href}>
+            <Link key={href} className="text-base md:text-xl" href={href}>
               {label}
             </Link>
           ))}
         </div>
-        <div className="text-xl">
+        <div className="md:text-xl">
           Contact Information:
           <br />
-          Email: aestheticgardensuk@gmail.com
+          Email:
+          <br />
+          aestheticgardensuk@gmail.com
           <br />
           Social medias:
           <div className="mt-3 flex gap-[22px]">
@@ -51,18 +53,26 @@ const Footer = () => {
                 "https://www.instagram.com/aestheticgardensuk?igsh=b2pvNTdoMDFiNWN1&utm_source=qr"
               }
             >
-              <Image src={InstagramIcon} alt="Instagram" />
+              <Image
+                className="h-[26px] w-[26px] md:h-[38px] md:w-[38px]"
+                src={InstagramIcon}
+                alt="Instagram"
+              />
             </Link>
             <Link
               target="_blank"
               href={"https://www.facebook.com/profile.php?id=61561168437821"}
             >
-              <Image src={FacebookIcon} alt="Facebook" />
+              <Image
+                className="h-[26px] w-[26px] md:h-[38px] md:w-[38px]"
+                src={FacebookIcon}
+                alt="Facebook"
+              />
             </Link>
           </div>
         </div>
       </div>
-      <div className="border-t-2 border-white py-3 text-center">
+      <div className="border-t-2 border-white py-3 text-center text-base md:text-xl">
         2024 © Aesthetic Gardens LTD | All rights reserved
       </div>
     </footer>

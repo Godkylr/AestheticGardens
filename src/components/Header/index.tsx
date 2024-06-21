@@ -8,7 +8,7 @@ import { useState } from "react";
 import XmarkIcon from "~/assets/svg/xmark.svg";
 import InstagramIcon from "~/assets/svg/instagram.svg";
 import FacebookIcon from "~/assets/svg/facebook.svg";
-import LogoImage from "~/assets/img/logo.png";
+import LogoIcon from "~/assets/svg/logo.svg";
 
 const LINKS = [
   {
@@ -43,10 +43,14 @@ const Header = () => {
       <div className="h-[100px]">
         <header
           id="header"
-          className="fixed z-10 flex h-[100px] w-full items-center justify-between bg-[#619D61] px-[56px] shadow-lg"
+          className="fixed z-10 flex h-[100px] w-full items-center justify-between bg-[#619D61] px-[30px] shadow-lg md:px-[56px]"
         >
           <Link href="#intro">
-            <Image src={LogoImage} alt="Logo" />
+            <Image
+              className="w-[80px] md:w-[100px]"
+              src={LogoIcon}
+              alt="Logo"
+            />
           </Link>
           <nav className="hidden lg:flex">
             {LINKS.map(({ href, label }) => (
@@ -73,10 +77,14 @@ const Header = () => {
       </div>
 
       <Drawer anchor="bottom" open={isDrawerOpen} onClose={toggleDrawerOpen}>
-        <div className="h-screen w-screen bg-[#619D61] p-4 font-medium text-white">
-          <div className="flex items-center justify-between">
+        <div className="h-screen w-screen bg-[#619D61] font-medium text-white">
+          <div className="flex h-[100px] items-center justify-between px-[30px] md:px-[56px]">
             <Link href="#intro" onClick={toggleDrawerOpen}>
-              <Image src={LogoImage} alt="Logo" />
+              <Image
+                className="w-[80px] md:w-[100px]"
+                src={LogoIcon}
+                alt="Logo"
+              />
             </Link>
             <Image
               src={XmarkIcon}
@@ -85,34 +93,36 @@ const Header = () => {
               className="w-[44px] cursor-pointer"
             />
           </div>
-          <nav className="mt-24 flex flex-col items-center">
-            {LINKS.map((link, index) => (
+          <div className="p-4">
+            <nav className="mt-24 flex flex-col items-center">
+              {LINKS.map((link, index) => (
+                <Link
+                  onClick={toggleDrawerOpen}
+                  className="mt-5 text-xl font-bold first:mt-0"
+                  href={link.href}
+                  key={index}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="my-[18px] h-[2px] bg-white" />
+            <div className="mt-3 flex justify-center gap-[22px]">
               <Link
-                onClick={toggleDrawerOpen}
-                className="mt-5 text-xl font-bold first:mt-0"
-                href={link.href}
-                key={index}
+                target="_blank"
+                href={
+                  "https://www.instagram.com/aestheticgardensuk?igsh=b2pvNTdoMDFiNWN1&utm_source=qr"
+                }
               >
-                {link.label}
+                <Image src={InstagramIcon} alt="Instagram" />
               </Link>
-            ))}
-          </nav>
-          <div className="my-[18px] h-[2px] bg-white" />
-          <div className="mt-3 flex justify-center gap-[22px]">
-            <Link
-              target="_blank"
-              href={
-                "https://www.instagram.com/aestheticgardensuk?igsh=b2pvNTdoMDFiNWN1&utm_source=qr"
-              }
-            >
-              <Image src={InstagramIcon} alt="Instagram" />
-            </Link>
-            <Link
-              target="_blank"
-              href={"https://www.facebook.com/profile.php?id=61561168437821"}
-            >
-              <Image src={FacebookIcon} alt="Facebook" />
-            </Link>
+              <Link
+                target="_blank"
+                href={"https://www.facebook.com/profile.php?id=61561168437821"}
+              >
+                <Image src={FacebookIcon} alt="Facebook" />
+              </Link>
+            </div>
           </div>
         </div>
       </Drawer>

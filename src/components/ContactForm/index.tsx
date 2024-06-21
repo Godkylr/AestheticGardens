@@ -26,9 +26,9 @@ const ContactForm = () => {
     <form
       onSubmit={handleSubmit}
       ref={formRef as LegacyRef<HTMLFormElement>}
-      className="flex flex-wrap justify-between gap-y-[22px]"
+      className="flex flex-wrap justify-between gap-y-[22px] px-[10px]"
     >
-      <div className="flex w-[45%] flex-col">
+      <div className="flex w-full flex-col md:w-[45%]">
         <label>Name</label>
         <input
           required
@@ -36,7 +36,7 @@ const ContactForm = () => {
           className="h-[44px] rounded-[10px] border-[3px] border-white bg-transparent p-2 outline-none"
         />
       </div>
-      <div className="flex w-[45%] flex-col">
+      <div className="flex w-full flex-col md:w-[45%]">
         <label>Surname</label>
         <input
           required
@@ -44,7 +44,7 @@ const ContactForm = () => {
           className="h-[44px] rounded-[10px] border-[3px] border-white bg-transparent p-2 outline-none"
         />
       </div>
-      <div className="flex w-[45%] flex-col">
+      <div className="flex w-full flex-col md:w-[45%]">
         <label>Email</label>
         <input
           required
@@ -53,7 +53,7 @@ const ContactForm = () => {
           className="h-[44px] rounded-[10px] border-[3px] border-white bg-transparent p-2 outline-none"
         />
       </div>
-      <div className="flex w-[45%] flex-col">
+      <div className="flex w-full flex-col md:w-[45%]">
         <label>Phone number</label>
         <input
           required

@@ -53,7 +53,7 @@ export default function Home() {
     <main>
       <section
         id="intro"
-        className="relative pb-[200px] pt-[200px] text-center"
+        className="relative py-[140px] text-center md:py-[200px]"
       >
         <h1 className="text-[29px] md:text-[64px]">Aesthetic Gardens</h1>
         <h2 className="text-xl md:text-[40px]">Make world prettier</h2>
@@ -65,8 +65,8 @@ export default function Home() {
           alt="Intro image"
         />
       </section>
-      <section id="about" className="mt-[50px] text-center">
-        <h2 className="text-[40px]">ABOUT US</h2>
+      <section id="about" className="mt-[50px] px-[10px] text-center">
+        <h2 className="text-[29px] md:text-[40px]">ABOUT US</h2>
         <p className="mx-auto max-w-[470px] text-[20px]">
           The garden maintenance service organization was established with a
           special attitude to the nature of the founders. A special attitude has
@@ -109,12 +109,12 @@ export default function Home() {
         </div>
       </section>
       <section id="work" className="mx-auto mt-[50px]">
-        <h2 className="text-center text-[40px]">HOW WE WORK</h2>
+        <h2 className="text-center text-[29px] md:text-[40px]">HOW WE WORK</h2>
         <ComparisonSlider />
       </section>
       <section id="services" className="mx-auto mt-[50px]">
-        <h2 className="text-center text-[40px]">OUR SERVICES</h2>
-        <div className="mx-auto mt-4 grid max-w-[900px] grid-cols-3 gap-8">
+        <h2 className="text-center text-[29px] md:text-[40px]">OUR SERVICES</h2>
+        <div className="mx-auto mt-4 grid max-w-[900px] grid-cols-2 gap-8 md:grid-cols-3">
           {[
             {
               icon: <Image src={LawnMowingImage} alt="Lawn mowing" />,
@@ -160,8 +160,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="career" className="mx-auto mt-[50px] text-center">
-        <h2 className="text-[40px]">CAREER OPPORTUNITIES</h2>
+      <section id="career" className="mx-auto mt-[50px] px-[10px] text-center">
+        <h2 className="text-[29px] md:text-[40px]">CAREER OPPORTUNITIES</h2>
         <p className="mx-auto mt-9 max-w-[780px] text-lg">
           We have built a unique approach proven by successful market
           experience. We are convinced that the success of our organization
@@ -194,7 +194,7 @@ export default function Home() {
         ))}
       </section>
       <section id="contact" className="mx-auto mb-20 mt-[60px] max-w-[534px]">
-        <h2 className="text-center text-[40px]">CONTACT US</h2>
+        <h2 className="text-center text-[29px] md:text-[40px]">CONTACT US</h2>
         <ContactForm />
       </section>
     </main>
